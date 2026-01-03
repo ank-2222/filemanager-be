@@ -1,0 +1,46 @@
+
+spring:
+  application:
+    name: Ai File system
+
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    com.file.manager.security: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+
+oauth:
+  google:
+    client-id:
+    client-secret:
+    redirect-uri: http://localhost:5173/auth/callback
+
+jwt:
+  secret:
+
+aws:
+  s3:
+    access-key:
+    secret-key:
+    region: ap-south-1
+    bucket-name:
+  sqs:
+    queue-url:
+    region: ap-south-1
+server:
+  port: 8080
