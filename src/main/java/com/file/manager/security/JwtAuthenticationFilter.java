@@ -96,8 +96,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String bearerToken = request.getHeader("Authorization");
 
         if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
-            String token = bearerToken.substring(7);
-            return token;
+            return bearerToken.substring(7);
         }
         return null;
     }
