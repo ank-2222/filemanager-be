@@ -31,7 +31,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                                     FilterChain filterChain) throws ServletException, IOException {
         String requestURI = request.getRequestURI();
         // Skip JWT validation for open endpoints
-        if (requestURI.startsWith("/auth/")) {
+        if (requestURI.startsWith("/auth/")|| requestURI.startsWith("/health")) {
             filterChain.doFilter(request, response);
             return;
         }
