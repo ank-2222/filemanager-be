@@ -46,7 +46,7 @@ public class SecurityConfig {
     public org.springframework.web.cors.CorsConfigurationSource corsConfigurationSource() {
         var configuration = new org.springframework.web.cors.CorsConfiguration();
         configuration.setAllowCredentials(true); // allow cookies if using credentials
-        configuration.setAllowedOrigins(java.util.List.of("http://localhost:5173","https://filemanager-fe.onrender.com/","https://storewise.ankitkumar.space/")); // Vite dev
+        configuration.setAllowedOrigins(java.util.List.of("*")); // Vite dev
         configuration.setAllowedMethods(java.util.List.of("GET","POST","PUT","PATCH","DELETE","OPTIONS")); // include OPTIONS
         configuration.setAllowedHeaders(java.util.List.of("Authorization","Content-Type","X-Requested-With","Accept","Origin"));
         configuration.setExposedHeaders(java.util.List.of("Authorization","Location")); // optional
